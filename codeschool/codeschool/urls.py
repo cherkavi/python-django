@@ -20,5 +20,6 @@ from main_app import views as main_app_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+#   redirect all requests to module 'main_app.urls'
     url(r'^', include('main_app.urls')),
 ]

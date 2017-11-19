@@ -17,5 +17,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^index/', views.index),
+# map empty string to views.index
+    url(r'^$', views.index),
 ]
