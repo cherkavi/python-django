@@ -7,11 +7,19 @@
 		<br/>
 		<table>
 		    <tr>
-			<th>name</th><th>surname</th>
+			<th>name</th><th>surname</th><th>age</th>
 		    </tr>
+		    {%for each in people%}
 		    <tr>
-			<td>{{name}}</td><td>{{surname}}</td>
+			<td>{{each.name}}</td>
+			<td>{{each.surname}}</td>
+			{%if each.age > 40 %}
+			    <td>old</td>
+			{%else%}
+			    <td>young</td>
+			{%endif%}
 		    </tr>
+		    {%endfor%}
 		</table>
 	</body>
 </html>
